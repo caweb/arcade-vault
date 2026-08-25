@@ -23,6 +23,10 @@ npm start             # serve the production build
 
 There is currently no test framework or `test` script configured. Do not assume a single-test command exists; add the project’s chosen test tooling and script before documenting one.
 
+## Skills
+
+Usa siempre /frontend-design para diseñar la interfaz de usuario.
+
 ## Architecture
 
 - This is a Next.js 16 App Router application. Folders under `app/` define route segments; a `page.tsx` makes a segment public and `layout.tsx` supplies shared UI.
