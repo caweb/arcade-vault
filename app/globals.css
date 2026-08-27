@@ -875,7 +875,7 @@ a { color: inherit; text-decoration: none; }
   -webkit-background-clip: text; background-clip: text; color: transparent;
   filter: drop-shadow(0 0 14px rgba(245,255,0,0.4));
 }
-.hall-head p { color: var(--ink-dim); margin: 12px 0 0; letter-spacing: 0.1em; }
+.hall-head p { color: var(--ink-dim); margin: 12px 0 0; letter-spacing: 0.1em; font-size: 10px; }
 
 .hall-tabs { display: flex; gap: 6px; flex-wrap: wrap; justify-content: center; margin-bottom: 22px; }
 .podium {
@@ -900,9 +900,10 @@ a { color: inherit; text-decoration: none; }
   font-family: var(--pixel); font-size: 28px;
   text-shadow: 0 0 12px currentColor;
 }
-.podium-slot.gold .rank-num { color: var(--gold); }
+.podium-slot.gold .rank-num { color: var(--gold); font-size: 36px; margin-top: 4px; }
 .podium-slot.silver .rank-num { color: var(--silver); }
 .podium-slot.bronze .rank-num { color: var(--bronze); }
+.podium-slot .podium-title { color: var(--gold); font-size: 9px; letter-spacing: 0.18em; }
 .podium-slot .name { font-family: var(--pixel); font-size: 12px; margin-top: 8px; letter-spacing: 0.06em; }
 .podium-slot .score { font-family: var(--pixel); font-size: 16px; color: var(--cyan); margin-top: 8px; text-shadow: 0 0 8px rgba(0,245,255,0.5); }
 .podium-slot .date { font-family: var(--mono); font-size: 11px; color: var(--ink-faint); margin-top: 6px; letter-spacing: 0.12em; }
@@ -944,6 +945,7 @@ a { color: inherit; text-decoration: none; }
   from { opacity: 0; transform: translateY(8px); }
   to { opacity: 1; transform: translateY(0); }
 }
+.hall-back { margin-top: 32px; text-align: center; }
 
 @media (max-width: 720px) {
   .hall-table .th, .hall-table .tr { grid-template-columns: 50px 1fr 90px 90px; font-size: 12px; padding: 10px 12px; }
