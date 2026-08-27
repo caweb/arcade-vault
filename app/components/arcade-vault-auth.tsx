@@ -31,11 +31,11 @@ export default function ArcadeVaultAuth() {
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     persistUser(normalizeUsername(username));
-    router.push("/");
+    router.push("/games");
   };
 
   const playAsGuest = () => {
-    router.push("/");
+    router.push("/games");
   };
 
   return (
