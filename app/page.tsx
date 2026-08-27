@@ -1,5 +1,5 @@
-import ArcadeVaultHome from "./components/arcade-vault-home";
+import ArcadeVaultLibrary from "./components/arcade-vault-library";
 
 export default function Home() {
-  return <ArcadeVaultHome />;
+  return <ArcadeVaultLibrary />;
 }
