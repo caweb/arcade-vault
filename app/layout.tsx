@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Courier_Prime, JetBrains_Mono, Press_Start_2P } from "next/font/google";
+import ArcadeVaultShell from "./components/arcade-vault-shell";
 import "./globals.css";
 
 const pressStart = Press_Start_2P({
@@ -35,9 +36,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={`${pressStart.variable} ${courierPrime.variable} ${jetBrainsMono.variable}`}
     >
       <body>
-        <div className="av-bg" aria-hidden="true" />
-        <div className="av-noise" aria-hidden="true" />
-        <div className="av-app">{children}</div>
+        <ArcadeVaultShell>{children}</ArcadeVaultShell>
       </body>
     </html>
   );
