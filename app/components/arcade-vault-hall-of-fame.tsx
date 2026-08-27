@@ -124,7 +124,7 @@ export default function ArcadeVaultHallOfFame() {
       </div>
 
       <div className="hall-back">
-        <Link className="btn lg" href="/">VOLVER A LA BIBLIOTECA</Link>
+        <Link className="btn lg" href="/games">VOLVER A LA BIBLIOTECA</Link>
       </div>
     </main>
   );
