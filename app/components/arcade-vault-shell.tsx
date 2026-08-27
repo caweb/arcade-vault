@@ -65,19 +65,6 @@ function NavLink({
   );
 }
 
-function PendingNavItem({ mobile = false, mobileOpen = false }: { mobile?: boolean; mobileOpen?: boolean }) {
-  return (
-    <span
-      className={mobile ? "mobile-menu-pending" : "nav-pending"}
-      role="link"
-      aria-disabled="true"
-      tabIndex={mobile ? (mobileOpen ? 0 : -1) : 0}
-    >
-      Acerca de
-    </span>
-  );
-}
-
 export default function ArcadeVaultShell({ children }: { children: ReactNode }) {
   const pathname = usePathname();
   const [menuOpen, setMenuOpen] = useState(false);
@@ -87,6 +74,7 @@ export default function ArcadeVaultShell({ children }: { children: ReactNode }) 
   const libraryActive = pathname.startsWith("/games");
   const hallActive = pathname.startsWith("/hall-of-fame");
   const authActive = pathname.startsWith("/auth");
+  const aboutActive = pathname.startsWith("/about");
 
   useEffect(() => {
     if (!menuOpen) return;
@@ -129,7 +117,7 @@ export default function ArcadeVaultShell({ children }: { children: ReactNode }) 
             <NavLink href="/" active={homeActive}>Inicio</NavLink>
             <NavLink href="/games" active={libraryActive}>Biblioteca</NavLink>
             <NavLink href="/hall-of-fame" active={hallActive}>Salón de la Fama</NavLink>
-            <PendingNavItem />
+            <NavLink href="/about" active={aboutActive}>Acerca de</NavLink>
           </nav>
 
           <div className="spacer" />
@@ -166,7 +154,7 @@ export default function ArcadeVaultShell({ children }: { children: ReactNode }) 
           <NavLink href="/" active={homeActive} onClick={() => setMenuOpen(false)} tabIndex={menuOpen ? 0 : -1}>Inicio</NavLink>
           <NavLink href="/games" active={libraryActive} onClick={() => setMenuOpen(false)} tabIndex={menuOpen ? 0 : -1}>Biblioteca</NavLink>
           <NavLink href="/hall-of-fame" active={hallActive} onClick={() => setMenuOpen(false)} tabIndex={menuOpen ? 0 : -1}>Salón de la Fama</NavLink>
-          <PendingNavItem mobile mobileOpen={menuOpen} />
+          <NavLink href="/about" active={aboutActive} onClick={() => setMenuOpen(false)} tabIndex={menuOpen ? 0 : -1}>Acerca de</NavLink>
           {user ? (
             <button className="mobile-menu-user" type="button" onClick={handleLogout} tabIndex={menuOpen ? 0 : -1}>
               {user.name} · CERRAR SESIÓN
