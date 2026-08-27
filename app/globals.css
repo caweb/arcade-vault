@@ -542,7 +542,7 @@ a { color: inherit; text-decoration: none; }
   overflow: hidden;
 }
 .detail-info { display: flex; flex-direction: column; gap: 16px; }
-.detail-info h2 {
+.detail-info h1 {
   margin: 0;
   font-family: var(--pixel);
   font-size: clamp(20px, 3vw, 32px);
@@ -570,7 +570,7 @@ a { color: inherit; text-decoration: none; }
   border: 1px solid var(--line);
   background: var(--bg-2);
 }
-.leaderboard h3 {
+.leaderboard h2 {
   margin: 0;
   padding: 14px 16px;
   font-family: var(--pixel);
@@ -592,6 +592,7 @@ a { color: inherit; text-decoration: none; }
 }
 .lb-row .rk { font-family: var(--pixel); font-size: 11px; color: var(--ink-faint); }
 .lb-row .pl { color: var(--ink); }
+.lb-row .lb-date { font-size: 10px; color: var(--ink-faint); letter-spacing: 0.1em; }
 .lb-row .sc { text-align: right; font-family: var(--pixel); font-size: 12px; color: var(--cyan); }
 .lb-row.top1 .rk, .lb-row.top1 .sc { color: var(--gold); text-shadow: 0 0 6px rgba(255,207,58,0.6); }
 .lb-row.top2 .rk, .lb-row.top2 .sc { color: var(--silver); text-shadow: 0 0 6px rgba(199,208,224,0.5); }
