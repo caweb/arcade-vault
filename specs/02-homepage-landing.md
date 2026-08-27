@@ -1,6 +1,6 @@
 # SPEC 02 — Homepage landing de Arcade Vault
 
-> **Status:** Approved
+> **Status:** Implemented
 > **Depends on:** SPEC 01
 > **Date:** 2026-08-27
 > **Objective:** Convertir `/` en el landing visual de Arcade Vault y mover la Biblioteca a `/games`, conservando la navegación, los datos mock y las interacciones locales definidas por la plantilla `references/templates/home-about/`.
