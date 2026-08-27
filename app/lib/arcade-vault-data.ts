@@ -25,6 +25,33 @@ export type MockUser = {
   name: string;
 };
 
+export type HomeFeature = {
+  icon: "GAMEPAD" | "FREE" | "TROPHY" | "ROCKET";
+  title: string;
+  description: string;
+  accent: ArcadeAccent;
+};
+
+export type HomeStat = {
+  value: string;
+  unit: string;
+  summary: string;
+};
+
+export type HomeActivityRow = {
+  player: string;
+  game: string;
+  score: number;
+  timeLabel: string;
+  accent: ArcadeAccent;
+};
+
+export type HomeTopPlayer = {
+  rank: number;
+  player: string;
+  score: number;
+};
+
 export const GAMES: readonly ArcadeGame[] = [
   {
     id: "bloque-buster",
@@ -115,6 +142,57 @@ export const GAMES: readonly ArcadeGame[] = [
     plays: "4.2K",
   },
 ] as const;
+
+export const HOME_FEATURES: readonly HomeFeature[] = [
+  {
+    icon: "GAMEPAD",
+    title: "JUEGOS CLÁSICOS",
+    description: "Arkanoid, Tetris, Snake y muchos más. Los mejores arcades de todos los tiempos en un solo lugar.",
+    accent: "cyan",
+  },
+  {
+    icon: "FREE",
+    title: "100% GRATIS",
+    description: "Sin suscripciones, sin pagos ocultos. Todos los juegos disponibles de forma gratuita.",
+    accent: "yellow",
+  },
+  {
+    icon: "TROPHY",
+    title: "LADDER BOARDS",
+    description: "Compite con jugadores de todo el mundo. Escala el ranking y demuestra quién es el mejor.",
+    accent: "magenta",
+  },
+  {
+    icon: "ROCKET",
+    title: "SIEMPRE CRECIENDO",
+    description: "Agregamos nuevos juegos constantemente. Vuelve seguido, siempre habrá algo nuevo que jugar.",
+    accent: "green",
+  },
+];
+
+export const HOME_STATS: readonly HomeStat[] = [
+  { value: "12+", unit: "JUEGOS", summary: "Y CONTANDO" },
+  { value: "MILES", unit: "DE PARTIDAS", summary: "JUGADAS CADA DÍA" },
+  { value: "GLOBAL", unit: "RANKING", summary: "COMPITE CON EL MUNDO" },
+];
+
+export const HOME_ACTIVITY: readonly HomeActivityRow[] = [
+  { player: "NEONFOX", game: "Caída", score: 184220, timeLabel: "hace 2 min", accent: "magenta" },
+  { player: "PX_KAI", game: "Glotón", score: 96400, timeLabel: "hace 5 min", accent: "yellow" },
+  { player: "Z3R0COOL", game: "Invasores", score: 54190, timeLabel: "hace 8 min", accent: "green" },
+  { player: "VAULT_07", game: "Rocas", score: 41200, timeLabel: "hace 12 min", accent: "cyan" },
+  { player: "GLITCHA", game: "Bloque Buster", score: 28450, timeLabel: "hace 18 min", accent: "cyan" },
+  { player: "ARKADYA", game: "Serpentina", score: 7820, timeLabel: "hace 24 min", accent: "green" },
+  { player: "CYBER_LU", game: "Ranaria", score: 18900, timeLabel: "hace 31 min", accent: "yellow" },
+];
+
+export const HOME_TOP_PLAYERS: readonly HomeTopPlayer[] = [
+  { rank: 1, player: "NEONFOX", score: 312840 },
+  { rank: 2, player: "PX_KAI", score: 248110 },
+  { rank: 3, player: "M00NRYU", score: 196720 },
+  { rank: 4, player: "VAULT_07", score: 154300 },
+  { rank: 5, player: "GLITCHA", score: 138900 },
+];
 
 export const CATS = ["TODOS", "ARCADE", "PUZZLE", "SHOOTER", "VERSUS"] as const;
 export type ArcadeCategory = (typeof CATS)[number];
