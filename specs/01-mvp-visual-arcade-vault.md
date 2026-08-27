@@ -1,6 +1,6 @@
 # SPEC 01 — MVP visual de Arcade Vault
 
-> **Status:** Approved
+> **Status:** Implemented
 > **Depends on:** Ninguna
 > **Date:** 2026-08-26
 > **Objective:** Implementar en Next.js las cinco pantallas visuales de Arcade Vault con navegación App Router, datos ficticios centralizados y comportamiento local mínimo, sin implementar ningún juego.
@@ -78,24 +78,24 @@ export const CATS = ["TODOS", "ARCADE", "PUZZLE", "SHOOTER", "VERSUS"] as const;
 
 ## Acceptance criteria
 
-- [ ] `npm run build` termina correctamente sin errores de TypeScript ni de compilación de rutas.
-- [ ] `/` muestra Biblioteca con hero, ocho tarjetas, búsqueda, categorías y estado sin resultados.
-- [ ] Escribir un nombre filtra tarjetas por título sin distinguir mayúsculas y minúsculas.
-- [ ] Seleccionar una categoría actualiza las tarjetas visibles y la categoría activa.
-- [ ] Una tarjeta o su acción `JUGAR` navega a `/games/[id]` con el juego correcto.
-- [ ] Detalle muestra portada, descripción larga, estadísticas, acciones y leaderboard del juego seleccionado.
-- [ ] `JUGAR AHORA` navega a `/games/[id]/play` y `SALIR` vuelve al detalle.
-- [ ] El Reproductor mock muestra CRT, HUD, arena, indicadores y controles visuales sin ejecutar mecánica ni cambiar la puntuación automáticamente.
-- [ ] `/auth` permite alternar entre iniciar sesión y crear cuenta, conserva el campo de usuario y vuelve a Biblioteca al enviar.
-- [ ] El usuario enviado se normaliza a mayúsculas, se limita a 10 caracteres y se recupera desde `localStorage.av_user` al recargar.
-- [ ] El modo invitado vuelve a Biblioteca sin crear una sesión persistida.
-- [ ] Los botones Google y GitHub no realizan autenticación ni navegación externa.
-- [ ] La navegación muestra estado de usuario y permite cerrar sesión eliminando `av_user`.
-- [ ] Salón de la Fama permite cambiar de juego, muestra podio y tabla mock, y añade la fila del usuario solo cuando existe sesión.
-- [ ] Recargar cualquier ruta no cambia los rankings mock ni crea puntuaciones nuevas.
-- [ ] En viewport móvil aparece el menú lateral y las vistas no generan scroll horizontal.
-- [ ] Los estados de foco de inputs, botones y enlaces son perceptibles con teclado.
-- [ ] La consola del navegador no muestra errores al recorrer las cinco rutas y sus acciones principales.
+- [x] `npm run build` termina correctamente sin errores de TypeScript ni de compilación de rutas.
+- [x] `/` muestra Biblioteca con hero, ocho tarjetas, búsqueda, categorías y estado sin resultados.
+- [x] Escribir un nombre filtra tarjetas por título sin distinguir mayúsculas y minúsculas.
+- [x] Seleccionar una categoría actualiza las tarjetas visibles y la categoría activa.
+- [x] Una tarjeta o su acción `JUGAR` navega a `/games/[id]` con el juego correcto.
+- [x] Detalle muestra portada, descripción larga, estadísticas, acciones y leaderboard del juego seleccionado.
+- [x] `JUGAR AHORA` navega a `/games/[id]/play` y `SALIR` vuelve al detalle.
+- [x] El Reproductor mock muestra CRT, HUD, arena, indicadores y controles visuales sin ejecutar mecánica ni cambiar la puntuación automáticamente.
+- [x] `/auth` permite alternar entre iniciar sesión y crear cuenta, conserva el campo de usuario y vuelve a Biblioteca al enviar.
+- [x] El usuario enviado se normaliza a mayúsculas, se limita a 10 caracteres y se recupera desde `localStorage.av_user` al recargar.
+- [x] El modo invitado vuelve a Biblioteca sin crear una sesión persistida.
+- [x] Los botones Google y GitHub no realizan autenticación ni navegación externa.
+- [x] La navegación muestra estado de usuario y permite cerrar sesión eliminando `av_user`.
+- [x] Salón de la Fama permite cambiar de juego, muestra podio y tabla mock, y añade la fila del usuario solo cuando existe sesión.
+- [x] Recargar cualquier ruta no cambia los rankings mock ni crea puntuaciones nuevas.
+- [x] En viewport móvil aparece el menú lateral y las vistas no generan scroll horizontal.
+- [x] Los estados de foco de inputs, botones y enlaces son perceptibles con teclado.
+- [x] La consola del navegador no muestra errores al recorrer las cinco rutas y sus acciones principales.
 
 ## Decisions
 
