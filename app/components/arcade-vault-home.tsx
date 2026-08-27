@@ -52,53 +52,9 @@ function GameCard({ game }: { game: ArcadeGame }) {
   );
 }
 
-function ArcadeNav({ open, onToggle }: { open: boolean; onToggle: () => void }) {
-  return (
-    <>
-      <nav className="av-nav">
-        <a className="logo" href="#biblioteca" aria-label="Ir a la biblioteca">
-          <span className="logo-mark" aria-hidden="true" />
-          <span className="logo-text neon-cyan">ARCADE <span className="neon-magenta">VAULT</span></span>
-        </a>
-        <div className="links">
-          <a className="active" href="#biblioteca">Biblioteca</a>
-          <a href="#salon">Salón de la Fama</a>
-        </div>
-        <div className="spacer" />
-        <div className="coin-counter" aria-label="Créditos disponibles">
-          <span className="coin" aria-hidden="true" />
-          <span>CRÉDITOS · 03</span>
-        </div>
-        <button className="btn auth-btn" type="button">Iniciar Sesión</button>
-        <button
-          className="btn ghost hamburger"
-          type="button"
-          aria-label="Abrir menú"
-          aria-expanded={open}
-          aria-controls="mobile-menu"
-          onClick={onToggle}
-        >
-          ≡
-        </button>
-      </nav>
-
-      <div className={`av-mobile-backdrop${open ? " open" : ""}`} onClick={onToggle} />
-      <aside id="mobile-menu" className={`av-mobile-panel${open ? " open" : ""}`} aria-hidden={!open}>
-        <div className="pixel neon-cyan mobile-menu-title">MENÚ</div>
-        <a className="active" href="#biblioteca" onClick={onToggle}>Biblioteca</a>
-        <a href="#salon" onClick={onToggle}>Salón de la Fama</a>
-        <a href="#login" onClick={onToggle}>Iniciar Sesión</a>
-        <div className="mobile-menu-spacer" />
-        <div className="pixel mobile-menu-credits">CRÉDITOS · 03</div>
-      </aside>
-    </>
-  );
-}
-
 export default function ArcadeVaultHome() {
   const [query, setQuery] = useState("");
   const [category, setCategory] = useState<ArcadeCategory>("TODOS");
-  const [menuOpen, setMenuOpen] = useState(false);
 
   const filteredGames = useMemo(() => {
     const normalizedQuery = query.trim().toLowerCase();
@@ -110,9 +66,7 @@ export default function ArcadeVaultHome() {
   }, [category, query]);
 
   return (
-    <>
-      <ArcadeNav open={menuOpen} onToggle={() => setMenuOpen((isOpen) => !isOpen)} />
-      <main className="av-main" id="biblioteca">
+    <main className="av-main" id="biblioteca">
         <div className="fade-in">
           <section className="av-hero">
             <h1 className="flicker">ARCADE VAULT</h1>
@@ -154,8 +108,6 @@ export default function ArcadeVaultHome() {
             )}
           </div>
         </div>
-      </main>
-      <footer className="av-footer">© 2026 ARCADE VAULT · HECHO CON PIXELES Y NEÓN · v2.6.0</footer>
-    </>
+    </main>
   );
 }
