@@ -30,7 +30,7 @@ export default function ArcadeVaultGameDetail({ game }: { game: ArcadeGame }) {
           </div>
           <div className="detail-actions">
             <Link className="btn xl pulse" href={`/games/${game.id}/play`}>▶ JUGAR AHORA</Link>
-            <Link className="btn ghost lg" href="/">VOLVER AL VAULT</Link>
+            <Link className="btn ghost lg" href="/games">VOLVER AL VAULT</Link>
           </div>
         </div>
       </div>
