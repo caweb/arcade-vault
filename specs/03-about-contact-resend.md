@@ -1,6 +1,6 @@
 # SPEC 03 — About y contacto con Resend
 
-> **Status:** Approved
+> **Status:** Implemented
 > **Depends on:** SPEC 02
 > **Date:** 2026-08-27
 > **Objective:** Implementar la página `/about` de Arcade Vault con fidelidad visual a la plantilla `references/templates/home-about/about.jsx` y enviar su formulario de contacto mediante Resend a través de un endpoint server-side.
